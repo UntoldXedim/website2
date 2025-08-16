@@ -1,91 +1,73 @@
-// Product data
+// Product data - Updated CBD products
 const products = [
     {
         "id": 1,
-        "name": "Premium Whey Protein Powder",
-        "price": 49.99,
-        "category": "Protein",
-        "description": "High-quality whey protein isolate with 25g protein per serving. Available in vanilla, chocolate, and strawberry flavors.",
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        "name": "Premium CBD Oil 5mg",
+        "price": 29.99,
+        "category": "CBD",
+        "dosage": "5mg",
+        "description": "Entry-level CBD oil perfect for beginners. Each serving contains 5mg of premium hemp-derived CBD extract. Ideal for daily wellness and relaxation.",
+        "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 2,
-        "name": "Creatine Monohydrate",
-        "price": 24.99,
-        "category": "Performance",
-        "description": "Pure creatine monohydrate powder to enhance strength, power, and muscle growth. Unflavored, 300g container.",
-        "image": "https://images.unsplash.com/photo-1544991875-5dc1b05f607d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        "name": "Premium CBD Oil 10mg",
+        "price": 39.99,
+        "category": "CBD",
+        "dosage": "10mg",
+        "description": "Mild strength CBD oil for regular users. 10mg per serving of high-quality CBD extract. Great for stress relief and general wellness support.",
+        "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 3,
-        "name": "Pre-Workout Complex",
-        "price": 39.99,
-        "category": "Performance",
-        "description": "Energy-boosting pre-workout formula with caffeine, beta-alanine, and nitric oxide boosters. Fruit punch flavor.",
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        "name": "Premium CBD Oil 15mg",
+        "price": 49.99,
+        "category": "CBD",
+        "dosage": "15mg",
+        "description": "Medium strength CBD oil for moderate users. 15mg per serving delivers balanced effects. Perfect for daily stress management and sleep support.",
+        "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 4,
-        "name": "BCAA Recovery Powder",
-        "price": 29.99,
-        "category": "Recovery",
-        "description": "Branch-chain amino acids in 2:1:1 ratio to support muscle recovery and reduce fatigue. Tropical flavor.",
-        "image": "https://images.unsplash.com/photo-1544991875-5dc1b05f607d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        "name": "Premium CBD Oil 20mg",
+        "price": 59.99,
+        "category": "CBD",
+        "dosage": "20mg",
+        "description": "Strong strength CBD oil for experienced users. 20mg per serving provides potent effects. Excellent for pain management and deep relaxation.",
+        "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 5,
-        "name": "Daily Multivitamin",
-        "price": 19.99,
-        "category": "Vitamins",
-        "description": "Complete daily vitamin and mineral complex with 23 essential nutrients. 60 tablets per bottle.",
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        "name": "Premium CBD Oil 30mg",
+        "price": 79.99,
+        "category": "CBD",
+        "dosage": "30mg",
+        "description": "Extra strong CBD oil for advanced users. 30mg per serving delivers premium potency. Ideal for chronic pain relief and intensive wellness support.",
+        "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 6,
-        "name": "Omega-3 Fish Oil",
-        "price": 27.99,
-        "category": "Vitamins",
-        "description": "High-potency omega-3 fatty acids from wild-caught fish. 1000mg EPA/DHA per serving, 120 capsules.",
-        "image": "https://images.unsplash.com/photo-1544991875-5dc1b05f607d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        "id": 7,
-        "name": "Vitamin D3 + K2",
-        "price": 22.99,
-        "category": "Vitamins",
-        "description": "Vitamin D3 5000 IU with K2 for optimal calcium absorption and bone health. 90 vegetarian capsules.",
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        "id": 8,
-        "name": "Mass Gainer Protein",
-        "price": 59.99,
-        "category": "Protein",
-        "description": "High-calorie protein powder with 50g protein and complex carbs for lean muscle growth. Chocolate flavor.",
-        "image": "https://images.unsplash.com/photo-1544991875-5dc1b05f607d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        "id": 9,
-        "name": "Magnesium Glycinate",
-        "price": 18.99,
-        "category": "Vitamins",
-        "description": "Highly absorbable magnesium glycinate for muscle relaxation and better sleep. 400mg per capsule, 120 count.",
-        "image": "https://images.unsplash.com/photo-1544991875-5dc1b05f607d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        "id": 10,
-        "name": "Post-Workout Recovery",
-        "price": 34.99,
-        "category": "Recovery",
-        "description": "Complete post-workout formula with protein, carbs, and electrolytes for optimal recovery. Mixed berry flavor.",
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        "name": "Premium CBD Oil 60mg",
+        "price": 119.99,
+        "category": "CBD",
+        "dosage": "60mg",
+        "description": "Maximum strength CBD oil for serious users. 60mg per serving offers the highest potency available. Professional-grade formula for maximum therapeutic benefits.",
+        "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     }
 ];
 
 // Global state
 let currentUser = null;
 let cart = [];
-let currentFilter = 'All';
+const shippingThreshold = 75.00;
+
+// Make functions globally available
+window.showPage = showPage;
+window.addToCart = addToCart;
+window.removeFromCart = removeFromCart;
+window.updateQuantity = updateQuantity;
+window.logout = logout;
+window.completeOrder = completeOrder;
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
@@ -125,8 +107,8 @@ function setupEventListeners() {
     }
 }
 
-// Page navigation - Fixed function
-window.showPage = function(pageId) {
+// Page navigation function
+function showPage(pageId) {
     console.log('Navigating to page:', pageId);
     
     // Hide all pages
@@ -157,7 +139,7 @@ window.showPage = function(pageId) {
     
     // Scroll to top
     window.scrollTo(0, 0);
-};
+}
 
 // User authentication
 function handleLogin(e) {
@@ -231,14 +213,14 @@ function handleSignup(e) {
     console.log('User signed up and logged in:', newUser.name);
 }
 
-// Logout function - Made global
-window.logout = function() {
+// Logout function
+function logout() {
     currentUser = null;
     localStorage.removeItem('supplementStore_currentUser');
     updateUserInterface();
     showPage('home');
     console.log('User logged out');
-};
+}
 
 function loadUserSession() {
     const savedUser = localStorage.getItem('supplementStore_currentUser');
@@ -263,22 +245,23 @@ function updateUserInterface() {
     }
 }
 
-// Product display and filtering - Fixed function
-function displayProducts(productsToShow = products) {
+// Product display - Updated for CBD products
+function displayProducts() {
     const productsGrid = document.getElementById('productsGrid');
     if (!productsGrid) {
         console.error('Products grid not found');
         return;
     }
     
-    console.log('Displaying products:', productsToShow.length);
+    console.log('Displaying CBD products:', products.length);
     
-    productsGrid.innerHTML = productsToShow.map(product => `
+    productsGrid.innerHTML = products.map(product => `
         <div class="product-card" data-category="${product.category}">
             <img src="${product.image}" alt="${product.name}" class="product-image">
             <div class="product-content">
                 <div class="product-category">${product.category}</div>
                 <h3 class="product-name">${product.name}</h3>
+                <div class="product-dosage">${product.dosage}</div>
                 <div class="product-price">$${product.price.toFixed(2)}</div>
                 <p class="product-description">${product.description}</p>
                 <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
@@ -289,31 +272,8 @@ function displayProducts(productsToShow = products) {
     `).join('');
 }
 
-// Fixed filter function - Made global
-window.filterProducts = function(category) {
-    console.log('Filtering products by category:', category);
-    currentFilter = category;
-    
-    // Update filter button states
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.textContent.trim() === category) {
-            btn.classList.add('active');
-        }
-    });
-    
-    // Filter and display products
-    const filteredProducts = category === 'All' 
-        ? products 
-        : products.filter(product => product.category === category);
-    
-    console.log('Filtered products count:', filteredProducts.length);
-    displayProducts(filteredProducts);
-};
-
-// Shopping cart functionality - Made global functions
-window.addToCart = function(productId) {
+// Shopping cart functionality
+function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     if (!product) {
         console.error('Product not found:', productId);
@@ -347,17 +307,17 @@ window.addToCart = function(productId) {
         button.textContent = originalText;
         button.style.backgroundColor = originalColor || '#28a745';
     }, 1000);
-};
+}
 
-window.removeFromCart = function(productId) {
+function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     saveCart();
     updateCartCount();
     displayCartItems();
     console.log('Removed from cart:', productId);
-};
+}
 
-window.updateQuantity = function(productId, change) {
+function updateQuantity(productId, change) {
     const item = cart.find(item => item.id === productId);
     if (!item) return;
     
@@ -370,7 +330,7 @@ window.updateQuantity = function(productId, change) {
         updateCartCount();
         displayCartItems();
     }
-};
+}
 
 function saveCart() {
     localStorage.setItem('supplementStore_cart', JSON.stringify(cart));
@@ -414,11 +374,15 @@ function displayCartItems() {
         return;
     }
     
+    const cartTotal = calculateCartTotal();
+    const isEligibleForFreeShipping = cartTotal >= shippingThreshold;
+    
     cartItemsContainer.innerHTML = cart.map(item => `
         <div class="cart-item">
             <img src="${item.image}" alt="${item.name}" class="cart-item-image">
             <div class="cart-item-details">
                 <div class="cart-item-name">${item.name}</div>
+                <div class="cart-item-dosage" style="font-size: var(--font-size-sm); color: #28a745; font-weight: var(--font-weight-medium);">${item.dosage}</div>
                 <div class="cart-item-price">$${item.price.toFixed(2)}</div>
             </div>
             <div class="quantity-controls">
@@ -430,7 +394,20 @@ function displayCartItems() {
         </div>
     `).join('');
     
-    cartTotalElement.textContent = calculateCartTotal().toFixed(2);
+    cartTotalElement.textContent = cartTotal.toFixed(2);
+    
+    // Update shipping notice
+    const shippingNotice = document.querySelector('.shipping-notice p');
+    if (shippingNotice) {
+        if (isEligibleForFreeShipping) {
+            shippingNotice.textContent = 'You qualify for free shipping!';
+            shippingNotice.style.color = '#28a745';
+        } else {
+            const amountNeeded = (shippingThreshold - cartTotal).toFixed(2);
+            shippingNotice.textContent = `Add $${amountNeeded} more for free shipping!`;
+            shippingNotice.style.color = '#f39c12';
+        }
+    }
 }
 
 // Account management
@@ -457,8 +434,8 @@ function displayAccountInfo() {
     displayOrderHistory();
 }
 
-// Order completion - Made global
-window.completeOrder = function() {
+// Order completion function
+function completeOrder() {
     if (!currentUser) {
         alert('Please log in to complete your order.');
         showPage('login');
@@ -477,13 +454,19 @@ window.completeOrder = function() {
         return;
     }
     
+    const cartTotal = calculateCartTotal();
+    const shippingCost = cartTotal >= shippingThreshold ? 0 : 9.99;
+    const finalTotal = cartTotal + shippingCost;
+    
     // Get form data
     const orderData = {
         id: Date.now(),
         userId: currentUser.id,
         items: [...cart],
-        total: calculateCartTotal(),
-        shipping: {
+        subtotal: cartTotal,
+        shipping: shippingCost,
+        total: finalTotal,
+        shippingInfo: {
             firstName: document.getElementById('firstName').value,
             lastName: document.getElementById('lastName').value,
             address: document.getElementById('address').value,
@@ -506,11 +489,19 @@ window.completeOrder = function() {
     updateCartCount();
     
     // Show success message
-    alert(`Order placed successfully! Order ID: ${orderData.id}\n\nNote: This is a demo order. Payment integration is required to process real payments.`);
+    let successMessage = `Order placed successfully! Order ID: ${orderData.id}\n\nSubtotal: $${cartTotal.toFixed(2)}`;
+    if (shippingCost > 0) {
+        successMessage += `\nShipping: $${shippingCost.toFixed(2)}`;
+    } else {
+        successMessage += `\nShipping: FREE (order over $${shippingThreshold})`;
+    }
+    successMessage += `\nTotal: $${finalTotal.toFixed(2)}\n\nNote: This is a demo order. Payment integration is required to process real payments.`;
+    
+    alert(successMessage);
     
     // Redirect to account page
     showPage('account');
-};
+}
 
 function displayOrderHistory() {
     const orderHistoryElement = document.getElementById('orderHistory');
@@ -528,7 +519,7 @@ function displayOrderHistory() {
         <div class="order-item" style="border: 1px solid var(--color-border); padding: var(--space-16); margin-bottom: var(--space-16); border-radius: var(--radius-base);">
             <div class="order-header" style="display: flex; justify-content: space-between; margin-bottom: var(--space-12);">
                 <strong>Order #${order.id}</strong>
-                <span>$${order.total.toFixed(2)}</span>
+                <span>$${(order.total || order.subtotal).toFixed(2)}</span>
             </div>
             <div class="order-date" style="color: var(--color-text-secondary); margin-bottom: var(--space-8);">
                 ${new Date(order.orderDate).toLocaleDateString()}
@@ -536,29 +527,17 @@ function displayOrderHistory() {
             <div class="order-items">
                 ${order.items.map(item => `
                     <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
-                        ${item.name} x ${item.quantity}
+                        ${item.name} (${item.dosage}) x ${item.quantity}
                     </div>
                 `).join('')}
             </div>
+            ${order.shipping !== undefined ? `
+                <div class="order-shipping" style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--space-8);">
+                    ${order.shipping === 0 ? 'Free shipping applied' : `Shipping: $${order.shipping.toFixed(2)}`}
+                </div>
+            ` : ''}
         </div>
     `).join('');
-}
-
-// Utility functions
-function formatPrice(price) {
-    return `$${price.toFixed(2)}`;
-}
-
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
 }
 
 // Error handling
@@ -566,28 +545,5 @@ window.addEventListener('error', function(e) {
     console.error('Application error:', e.error);
 });
 
-// Handle navigation for mobile
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('mobile-open');
-}
-
-// Add mobile styles for navigation
-const style = document.createElement('style');
-style.textContent = `
-    @media (max-width: 768px) {
-        .nav-links.mobile-open {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background-color: var(--color-surface);
-            border: 1px solid var(--color-border);
-            padding: var(--space-16);
-            box-shadow: var(--shadow-lg);
-        }
-    }
-`;
-document.head.appendChild(style);
+// Ensure all functions are available immediately
+console.log('All functions loaded and available globally');

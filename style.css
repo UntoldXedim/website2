@@ -1391,3 +1391,301 @@ select.form-control {
         padding: var(--space-16);
     }
 }
+
+
+/* Single Product Styles */
+.single-product-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.single-product-card {
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-standard);
+    width: 100%;
+}
+
+.single-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.product-price-range {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: #28a745;
+    margin-bottom: var(--space-12);
+}
+
+/* Product Details Page */
+.product-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-24);
+}
+
+.back-btn {
+    margin-bottom: var(--space-24);
+}
+
+.product-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-32);
+    align-items: start;
+}
+
+.product-image-section {
+    position: sticky;
+    top: var(--space-24);
+}
+
+.product-detail-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.product-info-section h1 {
+    margin-bottom: var(--space-8);
+}
+
+.product-description-section {
+    margin: var(--space-24) 0;
+    padding: var(--space-20);
+    background-color: var(--color-bg-1);
+    border-radius: var(--radius-base);
+    border-left: 4px solid #28a745;
+}
+
+.product-description-section h3 {
+    color: #28a745;
+    margin-bottom: var(--space-12);
+}
+
+.product-description-section p {
+    margin-bottom: var(--space-12);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.product-description-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Dosage Selection */
+.dosage-selection {
+    margin: var(--space-24) 0;
+}
+
+.dosage-selection h3 {
+    margin-bottom: var(--space-16);
+    color: var(--color-text);
+}
+
+.dosage-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-12);
+    margin-bottom: var(--space-20);
+}
+
+.dosage-option {
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-base);
+    padding: var(--space-16);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-standard);
+    background-color: var(--color-surface);
+}
+
+.dosage-option:hover:not(.out-of-stock) {
+    border-color: #28a745;
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.dosage-option.selected {
+    border-color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+    box-shadow: var(--shadow-md);
+}
+
+.dosage-option.out-of-stock {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--color-bg-4);
+}
+
+.dosage-label {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin-bottom: var(--space-8);
+}
+
+.dosage-price {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: #28a745;
+    margin-bottom: var(--space-8);
+}
+
+.stock-indicator {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-sm);
+    display: inline-block;
+}
+
+.stock-indicator.in-stock {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.stock-indicator.out-of-stock {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+/* Selected Product Info */
+.selected-product-info {
+    background-color: var(--color-bg-3);
+    padding: var(--space-20);
+    border-radius: var(--radius-base);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    margin: var(--space-16) 0;
+}
+
+.selected-dosage {
+    margin-bottom: var(--space-12);
+}
+
+.dosage-badge {
+    background-color: #28a745;
+    color: white;
+    padding: var(--space-4) var(--space-12);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-sm);
+}
+
+.selected-price {
+    margin-bottom: var(--space-12);
+}
+
+.selected-price .price {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: #28a745;
+}
+
+.add-to-cart-section {
+    margin-top: var(--space-16);
+}
+
+/* Disclaimer Section */
+.disclaimer-section {
+    margin-top: var(--space-32);
+    padding: var(--space-24);
+    background-color: var(--color-bg-2);
+    border-radius: var(--radius-base);
+    border-left: 4px solid #f39c12;
+}
+
+.disclaimer-section h3 {
+    color: #f39c12;
+    margin-bottom: var(--space-16);
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.disclaimer-section h3::before {
+    content: "⚠️";
+    font-size: var(--font-size-lg);
+}
+
+.disclaimer-content p {
+    margin-bottom: var(--space-12);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: var(--font-size-sm);
+}
+
+.disclaimer-content p:last-child {
+    margin-bottom: 0;
+}
+
+.disclaimer-content p strong {
+    color: #f39c12;
+    font-weight: var(--font-weight-bold);
+}
+
+/* Responsive Design Updates */
+@media (max-width: 768px) {
+    .product-details-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-24);
+    }
+
+    .product-image-section {
+        position: static;
+    }
+
+    .product-detail-image {
+        height: 300px;
+    }
+
+    .dosage-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+
+    .product-details-container {
+        padding: var(--space-16);
+    }
+
+    .disclaimer-section {
+        padding: var(--space-16);
+        margin-top: var(--space-24);
+    }
+}
+
+@media (max-width: 480px) {
+    .dosage-options {
+        grid-template-columns: 1fr;
+    }
+
+    .dosage-option {
+        padding: var(--space-12);
+    }
+
+    .product-description-section {
+        padding: var(--space-16);
+    }
+
+    .selected-product-info {
+        padding: var(--space-16);
+    }
+}
+
+/* Terms link in navigation - only show when not logged in */
+.nav-links .terms-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.nav-links .terms-link:hover {
+    color: var(--color-text);
+}

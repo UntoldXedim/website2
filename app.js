@@ -2,56 +2,44 @@
 const products = [
     {
         "id": 1,
-        "name": "Premium CBD Oil 5mg",
-        "price": 29.99,
-        "category": "CBD",
+        "name": "Retatrutde 5mg Vial",
+        "price": 24.99,
         "dosage": "5mg",
-        "description": "Entry-level CBD oil perfect for beginners. Each serving contains 5mg of premium hemp-derived CBD extract. Ideal for daily wellness and relaxation.",
         "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 2,
-        "name": "Premium CBD Oil 10mg",
+        "name": "Retatrutde 10mg Vial",
         "price": 39.99,
-        "category": "CBD",
         "dosage": "10mg",
-        "description": "Mild strength CBD oil for regular users. 10mg per serving of high-quality CBD extract. Great for stress relief and general wellness support.",
         "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 3,
-        "name": "Premium CBD Oil 15mg",
-        "price": 49.99,
-        "category": "CBD",
+        "name": "Retatrutde 15mg Vial",
+        "price": 54.99,
         "dosage": "15mg",
-        "description": "Medium strength CBD oil for moderate users. 15mg per serving delivers balanced effects. Perfect for daily stress management and sleep support.",
         "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 4,
-        "name": "Premium CBD Oil 20mg",
-        "price": 59.99,
-        "category": "CBD",
+        "name": "Retatrutde 20mg Vial",
+        "price": 69.99,
         "dosage": "20mg",
-        "description": "Strong strength CBD oil for experienced users. 20mg per serving provides potent effects. Excellent for pain management and deep relaxation.",
         "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 5,
-        "name": "Premium CBD Oil 30mg",
-        "price": 79.99,
-        "category": "CBD",
+        "name": "Retatrutde 30mg Vial",
+        "price": 74.99,
         "dosage": "30mg",
-        "description": "Extra strong CBD oil for advanced users. 30mg per serving delivers premium potency. Ideal for chronic pain relief and intensive wellness support.",
         "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
         "id": 6,
-        "name": "Premium CBD Oil 60mg",
-        "price": 119.99,
-        "category": "CBD",
+        "name": "Retatrutde 60mg Vial",
+        "price": 99.99,
         "dosage": "60mg",
-        "description": "Maximum strength CBD oil for serious users. 60mg per serving offers the highest potency available. Professional-grade formula for maximum therapeutic benefits.",
         "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     }
 ];

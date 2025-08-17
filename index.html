@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retatrutide Supply - Premium Research Supplements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Age Verification Modal -->
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <h2>Age Verification Required</h2>
+            <p>You must be 21 years or older to access this website. Are you 21 years of age or older?</p>
+            <div class="modal-buttons">
+                <button id="ageYes" class="btn btn--primary">Yes, I am 21+</button>
+                <button id="ageNo" class="btn btn--secondary">No, I am under 21</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Age Restriction Page -->
+    <div id="ageRestriction" class="page hidden">
+        <div class="container">
+            <div class="age-restriction-content">
+                <h1>Access Restricted</h1>
+                <p>You must be 21 years or older to access this website.</p>
+                <p>Thank you for your understanding.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="mainApp">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <div class="nav-brand">
+                        <h1>Retatrutide Supply</h1>
+                    </div>
+                    <div class="nav-links">
+                        <button id="cartBtn" class="btn btn--secondary">
+                            Cart (<span id="cartCount">0</span>)
+                        </button>
+                        <button id="accountBtn" class="btn btn--secondary">Account</button>
+                        <button id="logoutBtn" class="btn btn--outline hidden">Logout</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Home Page -->
+            <div id="homePage" class="page">
+                <div class="container">
+                    <section class="hero">
+                        <h1>Premium Research Supplements</h1>
+                        <p>High-quality Retatrutide vials for research purposes</p>
+                        <button id="shopNowBtn" class="btn btn--primary btn--lg">Shop Now</button>
+                    </section>
+
+                    <section class="product-showcase">
+                        <div class="card">
+                            <div class="card__body">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Retatrutide Vial" class="product-image">
+                                <h3>Retatrutide Vial</h3>
+                                <p>Premium Supplement</p>
+                                <p>Starting at $24.99</p>
+                                <button class="btn btn--primary" onclick="showProductDetails()">View Details</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Product Details Page -->
+            <div id="productPage" class="page hidden">
+                <div class="container">
+                    <button id="backToHome" class="btn btn--outline mb-8">← Back to Home</button>
+                    
+                    <div class="product-details">
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Retatrutide Vial" class="product-detail-image">
+                        </div>
+                        
+                        <div class="product-info">
+                            <h1>Retatrutide Vial</h1>
+                            <p class="product-category">Premium Supplement</p>
+                            
+                            <div class="dosage-selection">
+                                <label class="form-label">Select Dosage:</label>
+                                <div id="dosageOptions" class="dosage-grid">
+                                    <!-- Dosage options will be populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <div class="quantity-selection">
+                                <label class="form-label">Quantity:</label>
+                                <div class="quantity-controls">
+                                    <button id="decreaseQty" class="btn btn--outline btn--sm">-</button>
+                                    <input type="number" id="quantityInput" class="form-control quantity-input" value="1" min="1">
+                                    <button id="increaseQty" class="btn btn--outline btn--sm">+</button>
+                                </div>
+                            </div>
+
+                            <div class="price-display">
+                                <span class="price" id="totalPrice">$24.99</span>
+                            </div>
+
+                            <button id="addToCartBtn" class="btn btn--primary btn--lg btn--full-width">Add to Cart</button>
+
+                            <div class="product-description">
+                                <h3>Description</h3>
+                                <p>Our premium Retatrutide vials are manufactured to the highest standards and third-party tested for purity and potency. Each vial contains pharmaceutical-grade Retatrutide in precise dosages to ensure consistent and reliable results.</p>
+                                
+                                <p class="disclaimer"><strong>Disclaimer:</strong> This product is intended for research purposes only and is not intended for human consumption. It has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Page -->
+            <div id="cartPage" class="page hidden">
+                <div class="container">
+                    <h1>Shopping Cart</h1>
+                    <div id="cartItems">
+                        <!-- Cart items will be populated by JavaScript -->
+                    </div>
+                    <div id="cartSummary" class="cart-summary">
+                        <!-- Cart summary will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkout Page -->
+            <div id="checkoutPage" class="page hidden">
+                <div class="container">
+                    <h1>Checkout</h1>
+                    <div class="checkout-content">
+                        <div class="checkout-form">
+                            <h3>Billing Information</h3>
+                            <form id="checkoutForm">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Address</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">City</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">State</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">ZIP Code</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+
+                                <h3>Coupon Code</h3>
+                                <div class="coupon-section">
+                                    <div class="form-group">
+                                        <input type="text" id="couponInput" class="form-control" placeholder="Enter coupon code">
+                                        <button type="button" id="applyCoupon" class="btn btn--secondary">Apply</button>
+                                    </div>
+                                    <div id="couponMessage" class="coupon-message"></div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div id="orderSummaryItems">
+                                <!-- Order summary will be populated by JavaScript -->
+                            </div>
+                            <button id="placeOrderBtn" class="btn btn--primary btn--full-width">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Page -->
+            <div id="accountPage" class="page hidden">
+                <div class="container">
+                    <div id="loginSection">
+                        <h1>Account</h1>
+                        <div class="auth-forms">
+                            <div class="auth-form">
+                                <h3>Login</h3>
+                                <form id="loginForm">
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" id="loginEmail" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" id="loginPassword" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn--primary btn--full-width">Login</button>
+                                </form>
+                            </div>
+
+                            <div class="auth-form">
+                                <h3>Sign Up</h3>
+                                <form id="signupForm">
+                                    <div class="form-group">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" id="signupName" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" id="signupEmail" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" id="signupPassword" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn--primary btn--full-width">Sign Up</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="userDashboard" class="hidden">
+                        <h1>Welcome, <span id="userName"></span>!</h1>
+                        <div class="dashboard-content">
+                            <h3>Account Information</h3>
+                            <p>Email: <span id="userEmail"></span></p>
+                            <button id="viewTerms" class="btn btn--outline">View Terms of Service</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms of Service Page -->
+            <div id="termsPage" class="page hidden">
+                <div class="container">
+                    <button id="backFromTerms" class="btn btn--outline mb-8">← Back</button>
+                    <h1>Terms of Service</h1>
+                    <div class="terms-content">
+                        <h3>1. Product Disclaimer</h3>
+                        <p>This product is intended for research purposes only and is not intended for human consumption. It has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease.</p>
+                        
+                        <h3>2. Age Requirement</h3>
+                        <p>You must be at least 21 years of age to purchase products from this website.</p>
+                        
+                        <h3>3. Research Use Only</h3>
+                        <p>All products sold on this website are for research purposes only. Customers acknowledge that they are purchasing these products for laboratory research use only.</p>
+                        
+                        <h3>4. Shipping and Returns</h3>
+                        <p>All sales are final. We offer free shipping on orders over $75. Products are shipped within 1-2 business days.</p>
+                        
+                        <h3>5. Privacy Policy</h3>
+                        <p>We respect your privacy and will not share your personal information with third parties without your consent.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Confirmation Page -->
+            <div id="orderConfirmationPage" class="page hidden">
+                <div class="container">
+                    <div class="order-confirmation">
+                        <h1>Order Confirmed!</h1>
+                        <p>Thank you for your order. Your items will be shipped within 1-2 business days.</p>
+                        <div id="orderDetails">
+                            <!-- Order details will be populated by JavaScript -->
+                        </div>
+                        <button id="continueShoppingBtn" class="btn btn--primary">Continue Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

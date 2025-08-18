@@ -1,342 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Retatrutide Supply - Premium Research Supplements</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retatrutide Supply - Premium Research Supplements</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Age Verification Modal -->
-  <div id="ageModal" class="modal">
-    <div class="modal-content">
-      <h2>Age Verification Required</h2>
-      <p>You must be 21 years or older to access this website. Are you 21 years of age or older?</p>
-      <div class="modal-buttons">
-        <button id="ageYes" class="btn btn--primary">Yes, I am 21+</button>
-        <button id="ageNo" class="btn btn--secondary">No, I am under 21</button>
-      </div>
+    <!-- Age Verification Modal -->
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <h2>Age Verification Required</h2>
+            <p>You must be 21 years or older to access this website. Are you 21 years of age or older?</p>
+            <div class="modal-buttons">
+                <button id="ageYes" class="btn btn--primary">Yes, I am 21+</button>
+                <button id="ageNo" class="btn btn--secondary">No, I am under 21</button>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Age Restriction Page -->
-  <div id="ageRestriction" class="page">
-    <div class="container">
-      <div class="age-restriction-content" style="text-align:center; padding:40px 0;">
-        <h1>Access Restricted</h1>
-        <p>You must be 21 years or older to access this website.</p>
-        <p>Thank you for your understanding.</p>
-      </div>
+    <!-- Age Restriction Page -->
+    <div id="ageRestriction" class="page hidden">
+        <div class="container">
+            <div class="age-restriction-content">
+                <h1>Access Restricted</h1>
+                <p>You must be 21 years or older to access this website.</p>
+                <p>Thank you for your understanding.</p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Main Application -->
-  <div id="mainApp">
-    <!-- Header -->
-    <header class="navbar">
-      <div class="container nav-content">
-        <!-- Clickable brand that returns to Home -->
-        <a id="homeLink" class="brand" href="#" aria-label="Go to Home">Retatrutide Supply</a>
-
-        <div class="nav-links">
-          <button id="homeBtn" class="nav-link btn btn--outline" onclick="showPage('home')">Home</button>
-          <button id="checkoutBtn" class="nav-link btn btn--outline" onclick="showPage('checkout')">Checkout</button>
-          <button id="accountBtn" class="nav-link btn btn--outline" onclick="showPage('account')">Account</button>
-          <button id="loginNavBtn" class="nav-link btn btn--outline" onclick="showPage('login')">Login</button>
-          <button id="signupNavBtn" class="nav-link btn btn--outline" onclick="showPage('signup')">Sign up</button>
-          <button id="logoutBtn" class="nav-link btn btn--outline hidden" onclick="logout()">Logout</button>
-          <div class="cart-icon" onclick="showPage('checkout')" role="button" aria-label="Open Cart">
-            🛒
-            <span id="cartCount" class="cart-count">0</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-content">
-        <h1>Premium Retatrutide available in multiple dosages</h1>
-        <p>High quality vials with varying dosages from 5mg to 60mg at low prices (shipping to US, Canada, and Europe!).</p>
-        <button class="btn btn--primary" onclick="showPage('productDetails')">Shop now</button>
-      </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features">
-      <div class="container features-grid">
-        <div class="feature-item">
-          <div class="feature-icon">🧪</div>
-          <h3>Third-party tested for purity</h3>
-          <p>Each batch is verified to ensure consistent performance.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🚚</div>
-          <h3>Free shipping on orders over $75</h3>
-          <p>Automatic at checkout when subtotal reaches the threshold.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">💊</div>
-          <h3>Available from 5mg to 60mg</h3>
-          <p>Choose the precise dosage for your protocol.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products Section (Single Product, normal size card) -->
-    <section class="products-section page active" id="homePage">
-      <div class="container">
-        <div class="section-header">
-          <h2>Featured Product</h2>
-          <p>High-quality Retatrutide vials available in various dosages to meet specific needs.</p>
-        </div>
-
-        <!-- Normal-sized single product card -->
-        <div class="single-product-container">
-          <div class="product-card single-product-card" onclick="showProductDetails()">
-            <img class="product-image"
-                 src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                 alt="Retatrutide Vial"/>
-            <div class="product-content">
-              <span class="product-category">Premium Supplement</span>
-              <h3 class="product-name">Retatrutide Vial</h3>
-              <div class="product-price-range" id="productPriceRange">$24.99 - $99.99</div>
-              <p class="product-description">
-                Manufactured to the highest standards and third-party tested for purity and potency. Multiple precise dosages ensure consistent results.
-              </p>
-              <button class="add-to-cart-btn" onclick="showProductDetails()">View product</button>
+    <!-- Main Application -->
+    <div id="mainApp">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <div class="nav-brand">
+                        <h1>Retatrutide Supply</h1>
+                    </div>
+                    <div class="nav-links">
+                        <button id="cartBtn" class="btn btn--secondary">
+                            Cart (<span id="cartCount">0</span>)
+                        </button>
+                        <button id="accountBtn" class="btn btn--secondary">Account</button>
+                        <button id="logoutBtn" class="btn btn--outline hidden">Logout</button>
+                    </div>
+                </nav>
             </div>
-          </div>
-        </div>
+        </header>
 
-      </div>
-    </section>
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Home Page -->
+            <div id="homePage" class="page">
+                <div class="container">
+                    <section class="hero">
+                        <h1>Premium Research Supplements</h1>
+                        <p>High-quality Retatrutide vials for research purposes</p>
+                        <button id="shopNowBtn" class="btn btn--primary btn--lg">Shop Now</button>
+                    </section>
 
-    <!-- Product Details Page -->
-    <section class="page" id="productDetailsPage">
-      <div class="container product-details-container">
-        <button class="btn btn--secondary back-btn" onclick="showPage('home')">← Back</button>
-
-        <div class="product-details-grid">
-          <div class="product-image-section">
-            <img class="product-detail-image"
-                 src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                 alt="Retatrutide Vial">
-          </div>
-
-          <div class="product-info-section">
-            <h1>Retatrutide Vial</h1>
-            <span class="product-category">Premium Supplement</span>
-
-            <div class="product-description-section">
-              <h3>About this product</h3>
-              <p>Our premium Retatrutide vials are third-party tested for purity and potency.</p>
-              <p>Available in multiple dosage options to suit different needs and protocols. All vials are sealed and sterile, ensuring product integrity and safety.</p>
+                    <section class="product-showcase">
+                        <div class="card">
+                            <div class="card__body">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Retatrutide Vial" class="product-image">
+                                <h3>Retatrutide Vial</h3>
+                                <p>Premium Supplement</p>
+                                <p>Starting at $24.99</p>
+                                <button class="btn btn--primary" onclick="showProductDetails()">View Details</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
 
-            <!-- Dosage selection (cards) -->
-            <div class="dosage-selection">
-              <h3>Select dosage</h3>
-              <div class="dosage-options" id="dosageOptions"></div>
+            <!-- Product Details Page -->
+            <div id="productPage" class="page hidden">
+                <div class="container">
+                    <button id="backToHome" class="btn btn--outline mb-8">← Back to Home</button>
+                    
+                    <div class="product-details">
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Retatrutide Vial" class="product-detail-image">
+                        </div>
+                        
+                        <div class="product-info">
+                            <h1>Retatrutide Vial</h1>
+                            <p class="product-category">Premium Supplement</p>
+                            
+                            <div class="dosage-selection">
+                                <label class="form-label">Select Dosage:</label>
+                                <div id="dosageOptions" class="dosage-grid">
+                                    <!-- Dosage options will be populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <div class="quantity-selection">
+                                <label class="form-label">Quantity:</label>
+                                <div class="quantity-controls">
+                                    <button id="decreaseQty" class="btn btn--outline btn--sm">-</button>
+                                    <input type="number" id="quantityInput" class="form-control quantity-input" value="1" min="1">
+                                    <button id="increaseQty" class="btn btn--outline btn--sm">+</button>
+                                </div>
+                            </div>
+
+                            <div class="price-display">
+                                <span class="price" id="totalPrice">$24.99</span>
+                            </div>
+
+                            <button id="addToCartBtn" class="btn btn--primary btn--lg btn--full-width">Add to Cart</button>
+
+                            <div class="product-description">
+                                <h3>Description</h3>
+                                <p>Our premium Retatrutide vials are manufactured to the highest standards and third-party tested for purity and potency. Each vial contains pharmaceutical-grade Retatrutide in precise dosages to ensure consistent and reliable results.</p>
+                                
+                                <p class="disclaimer"><strong>Disclaimer:</strong> This product is intended for research purposes only and is not intended for human consumption. It has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Selected info + quantity + add to cart -->
-            <div class="selected-product-info" id="selectedInfo" style="display:none;">
-              <div class="selected-dosage">
-                Selected: <span class="dosage-badge" id="selectedDosageBadge">—</span>
-              </div>
-              <div class="selected-price">
-                Price: <span class="price" id="selectedPrice">$0.00</span>
-              </div>
-
-              <!-- Quantity controls -->
-              <div class="quantity-controls" style="margin:10px 0;">
-                <button class="quantity-btn" onclick="updateQuantity('decrement')">-</button>
-                <span class="quantity" id="selectedQuantity">1</span>
-                <button class="quantity-btn" onclick="updateQuantity('increment')">+</button>
-              </div>
-
-              <div class="add-to-cart-section">
-                <button class="btn btn--primary btn--full-width" onclick="addToCart()">Add to cart</button>
-              </div>
+            <!-- Cart Page -->
+            <div id="cartPage" class="page hidden">
+                <div class="container">
+                    <h1>Shopping Cart</h1>
+                    <div id="cartItems">
+                        <!-- Cart items will be populated by JavaScript -->
+                    </div>
+                    <div id="cartSummary" class="cart-summary">
+                        <!-- Cart summary will be populated by JavaScript -->
+                    </div>
+                </div>
             </div>
 
-            <!-- Disclaimer -->
-            <div class="disclaimer-section">
-              <h3>Disclaimer</h3>
-              <div class="disclaimer-content">
-                <p>This product is intended for research purposes only and is not intended for human consumption.</p>
-                <p>It has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease.</p>
-              </div>
+            <!-- Checkout Page -->
+            <div id="checkoutPage" class="page hidden">
+                <div class="container">
+                    <h1>Checkout</h1>
+                    <div class="checkout-content">
+                        <div class="checkout-form">
+                            <h3>Billing Information</h3>
+                            <form id="checkoutForm">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Address</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">City</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">State</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">ZIP Code</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+
+                                <h3>Coupon Code</h3>
+                                <div class="coupon-section">
+                                    <div class="form-group">
+                                        <input type="text" id="couponInput" class="form-control" placeholder="Enter coupon code">
+                                        <button type="button" id="applyCoupon" class="btn btn--secondary">Apply</button>
+                                    </div>
+                                    <div id="couponMessage" class="coupon-message"></div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div id="orderSummaryItems">
+                                <!-- Order summary will be populated by JavaScript -->
+                            </div>
+                            <button id="placeOrderBtn" class="btn btn--primary btn--full-width">Place Order</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-          </div>
-        </div>
-      </div>
-    </section>
+            <!-- Account Page -->
+            <div id="accountPage" class="page hidden">
+                <div class="container">
+                    <div id="loginSection">
+                        <h1>Account</h1>
+                        <div class="auth-forms">
+                            <div class="auth-form">
+                                <h3>Login</h3>
+                                <form id="loginForm">
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" id="loginEmail" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" id="loginPassword" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn--primary btn--full-width">Login</button>
+                                </form>
+                            </div>
 
-    <!-- Checkout Page -->
-    <section class="page" id="checkoutPage">
-      <div class="container checkout-container">
-        <div class="cart-section">
-          <h2>Your Cart</h2>
-          <div class="cart-items" id="cartItems"></div>
+                            <div class="auth-form">
+                                <h3>Sign Up</h3>
+                                <form id="signupForm">
+                                    <div class="form-group">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" id="signupName" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" id="signupEmail" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" id="signupPassword" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn--primary btn--full-width">Sign Up</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="shipping-notice">
-            <p>Free shipping on orders over $75!</p>
-          </div>
-
-          <!-- Coupon section -->
-          <div class="payment-section">
-            <div class="payment-placeholder">
-              <strong>Coupon</strong>
-              <div style="display:flex; gap:8px; margin-top:8px;">
-                <input type="text" id="couponInput" class="form-control" placeholder="Enter coupon code (e.g., SAVE100)" />
-                <button class="btn btn--secondary" onclick="applyCoupon()">Apply</button>
-              </div>
-              <small>Use SAVE100 for $10 off your order.</small>
-              <div id="couponMessage" style="margin-top:8px;"></div>
+                    <div id="userDashboard" class="hidden">
+                        <h1>Welcome, <span id="userName"></span>!</h1>
+                        <div class="dashboard-content">
+                            <h3>Account Information</h3>
+                            <p>Email: <span id="userEmail"></span></p>
+                            <button id="viewTerms" class="btn btn--outline">View Terms of Service</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <div class="cart-total" id="cartTotal">$0.00</div>
-          <button class="btn btn--primary btn--full-width" onclick="showPage('checkout')">Proceed to Checkout</button>
-        </div>
-
-        <div class="shipping-section">
-          <h2>Payment</h2>
-          <div class="payment-methods">
-            <div class="payment-method">
-              <span>Payment Links</span>
-              <small>Payment links and wallet addresses will be added here.</small>
+            <!-- Terms of Service Page -->
+            <div id="termsPage" class="page hidden">
+                <div class="container">
+                    <button id="backFromTerms" class="btn btn--outline mb-8">← Back</button>
+                    <h1>Terms of Service</h1>
+                    <div class="terms-content">
+                        <h3>1. Product Disclaimer</h3>
+                        <p>This product is intended for research purposes only and is not intended for human consumption. It has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease.</p>
+                        
+                        <h3>2. Age Requirement</h3>
+                        <p>You must be at least 21 years of age to purchase products from this website.</p>
+                        
+                        <h3>3. Research Use Only</h3>
+                        <p>All products sold on this website are for research purposes only. Customers acknowledge that they are purchasing these products for laboratory research use only.</p>
+                        
+                        <h3>4. Shipping and Returns</h3>
+                        <p>All sales are final. We offer free shipping on orders over $75. Products are shipped within 1-2 business days.</p>
+                        
+                        <h3>5. Privacy Policy</h3>
+                        <p>We respect your privacy and will not share your personal information with third parties without your consent.</p>
+                    </div>
+                </div>
             </div>
-            <button class="btn btn--primary btn--full-width" onclick="completeOrder()">Complete Order</button>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Account Page -->
-    <section class="page" id="accountPage">
-      <div class="container account-container">
-        <div class="account-info">
-          <h2>Account</h2>
-          <div class="account-detail"><strong>Name</strong><span id="accountName">—</span></div>
-          <div class="account-detail"><strong>Email</strong><span id="accountEmail">—</span></div>
-          <div class="account-detail"><strong>Member since</strong><span id="accountSince">—</span></div>
-        </div>
-        <div class="order-history">
-          <h2>Order History</h2>
-          <div id="orderHistory">No orders yet. Start shopping!</div>
-        </div>
-      </div>
-    </section>
+            <!-- Order Confirmation Page -->
+            <div id="orderConfirmationPage" class="page hidden">
+                <div class="container">
+                    <div class="order-confirmation">
+                        <h1>Order Confirmed!</h1>
+                        <p>Thank you for your order. Your items will be shipped within 1-2 business days.</p>
+                        <div id="orderDetails">
+                            <!-- Order details will be populated by JavaScript -->
+                        </div>
+                        <button id="continueShoppingBtn" class="btn btn--primary">Continue Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-    <!-- Login Page -->
-    <section class="page" id="loginPage">
-      <div class="container auth-container">
-        <form id="loginForm" class="auth-form">
-          <h2>Login</h2>
-          <div class="form-group">
-            <label class="form-label" for="loginEmail">Email</label>
-            <input id="loginEmail" type="email" class="form-control" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="loginPassword">Password</label>
-            <input id="loginPassword" type="password" class="form-control" required />
-          </div>
-          <div id="loginError" class="form-error" aria-live="polite"></div>
-          <button type="submit" class="btn btn--primary btn--full-width">Login</button>
-          <div class="auth-switch">Don’t have an account? <a href="#" onclick="showPage('signup')">Sign up</a></div>
-        </form>
-      </div>
-    </section>
-
-    <!-- Signup Page -->
-    <section class="page" id="signupPage">
-      <div class="container auth-container">
-        <form id="signupForm" class="auth-form">
-          <h2>Sign Up</h2>
-          <div class="form-group">
-            <label class="form-label" for="signupName">Full name</label>
-            <input id="signupName" type="text" class="form-control" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="signupEmail">Email</label>
-            <input id="signupEmail" type="email" class="form-control" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="signupPassword">Password</label>
-            <input id="signupPassword" type="password" class="form-control" required minlength="6" />
-          </div>
-          <div id="signupError" class="form-error" aria-live="polite"></div>
-          <button type="submit" class="btn btn--primary btn--full-width">Create account</button>
-          <div class="auth-switch">Already have an account? <a href="#" onclick="showPage('login')">Login</a></div>
-        </form>
-      </div>
-    </section>
-
-    <!-- Terms Page -->
-    <section class="page" id="termsPage">
-      <div class="container terms-container">
-        <div class="terms-content">
-          <h2>Terms of Service</h2>
-          <p><strong>Last updated: August 2025</strong></p>
-          <p>Welcome to Retasource.shop. By accessing or using our website, products, or services, you agree to these Terms of Service.</p>
-          <p>You must be at least 18 years old or the age of majority in your jurisdiction to purchase.</p>
-          <p>We reserve the right to modify products, descriptions, and prices at any time without notice.</p>
-          <p>All products sold are for research purposes only and are not intended for human consumption. Products have not been evaluated by the FDA.</p>
-          <p>Free shipping on orders over $75. Orders typically ship within 1–3 business days. Returns are accepted within 30 days on unopened items.</p>
-          <p>Always consult a healthcare professional before use. Our products are not intended to diagnose, treat, cure, or prevent any disease.</p>
-          <p>To the maximum extent permitted by law, we are not liable for any indirect or consequential damages.</p>
-          <p>Email: support@example.com</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-content">
-        <div class="footer-section">
-          <h4>About</h4>
-          <p>Premium research-use products with third-party testing.</p>
-        </div>
-        <div class="footer-section">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#" onclick="showPage('terms')">Terms of Service</a></li>
-            <li><a href="#" onclick="showPage('checkout')">Checkout</a></li>
-            <li><a href="#" onclick="showPage('account')">Account</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Contact</h4>
-          <p>Email: support@example.com</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        © 2025 Retatrutide Supply
-      </div>
-    </footer>
-  </div>
-
-  <script src="app.js"></script>
-  <script>
-    // Ensure brand link navigates to home without reloading
-    document.addEventListener('DOMContentLoaded', function() {
-      const homeLink = document.getElementById('homeLink');
-      if (homeLink) {
-        homeLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          if (typeof showPage === 'function') {
-            showPage('home');
-          } else {
-            // Fallback: scroll to top if routing not available
-            window.scrollTo(0, 0);
-          }
-        });
-      }
-    });
-  </script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -28,7 +28,7 @@ const productData = {
 
 // Coupons
 const coupons = {
-    "SAVE100": {discount: 10, description: "$10 off your order"}
+    "SAVE100": {discount: 99.96, description: "$99.96 off your order"}
 };
 
 const shippingThreshold = 75.00;
